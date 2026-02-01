@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Work Portfolio Gallery</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1c2632",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101922; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #283039; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f4a56; 
+        }
+
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased transition-colors duration-300 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-background-light/90 dark:bg-background-dark/90 border-b border-gray-200 dark:border-gray-800 transition-colors">
+<div class="max-w-[1440px] mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">LUMINA</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors" href="#">Work</a>
+<a class="text-sm font-medium text-slate-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors" href="#">About</a>
+<a class="text-sm font-medium text-slate-500 hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors" href="#">Services</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden md:flex items-center justify-center h-10 px-6 rounded-lg bg-primary hover:bg-blue-600 text-white text-sm font-bold transition-colors" href="#">
+                    Get in Touch
+                </a>
+<button class="md:hidden p-2 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 py-8">
+<!-- Hero / Title Section -->
+<div class="flex flex-col items-center justify-center py-10 md:py-16 space-y-4">
+<h2 class="text-3xl md:text-5xl font-bold text-center tracking-tight text-slate-900 dark:text-white uppercase">
+                Visual Perspectives
+            </h2>
+<p class="text-slate-500 dark:text-gray-400 text-center max-w-2xl text-sm md:text-base font-light">
+                A curated collection of cinematic moments and visual storytelling from around the globe.
+            </p>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap justify-center gap-3 mb-12 select-none">
+<button class="group flex items-center gap-2 h-10 px-5 rounded-full bg-slate-200 dark:bg-surface-dark hover:bg-primary dark:hover:bg-primary transition-all duration-300 ring-1 ring-transparent focus:ring-primary active:scale-95">
+<span class="material-symbols-outlined text-[20px] text-slate-600 dark:text-gray-400 group-hover:text-white">grid_view</span>
+<span class="text-sm font-medium text-slate-700 dark:text-gray-300 group-hover:text-white">All</span>
+</button>
+<button class="group flex items-center gap-2 h-10 px-5 rounded-full bg-transparent border border-slate-300 dark:border-gray-700 hover:border-primary hover:bg-primary/5 transition-all duration-300 active:scale-95">
+<span class="text-sm font-medium text-slate-600 dark:text-gray-400 group-hover:text-primary">Weddings</span>
+</button>
+<button class="group flex items-center gap-2 h-10 px-5 rounded-full bg-transparent border border-slate-300 dark:border-gray-700 hover:border-primary hover:bg-primary/5 transition-all duration-300 active:scale-95">
+<span class="text-sm font-medium text-slate-600 dark:text-gray-400 group-hover:text-primary">Commercial</span>
+</button>
+<button class="group flex items-center gap-2 h-10 px-5 rounded-full bg-transparent border border-slate-300 dark:border-gray-700 hover:border-primary hover:bg-primary/5 transition-all duration-300 active:scale-95">
+<span class="text-sm font-medium text-slate-600 dark:text-gray-400 group-hover:text-primary">Nature</span>
+</button>
+</div>
+<!-- Masonry Grid -->
+<div class="masonry-grid w-full">
+<!-- Item 1: Video -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_forwards]">
+<div class="relative w-full aspect-[4/5] md:aspect-[3/4]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Majestic mountain landscape with morning fog" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCil3d_cSnJpCCI8x0z6YeqRL-Ub8f2pZqQj2NuGcoyk8ah3WYjV3rgj-bCexahG2HTT-A0UYXEaH52hzDXeEADqrQrQxVj0ve6-6DzaI1xYbLpmVjIsPrqOnfNzZtV-W-SrJ5-fIBudJQZuN5RGLnHDK45h_wCfErsHkGZnLIWQB6lqcLmwfKmxnHUAOHe-eSI04IXY3Sm7091W9e_uHrcdtJ6iOqpoQqgAhi7WmwKFPAaiC0F8a0nsgFwQ_RvyfvsT3OkyyC0Fmo");'></div>
+<!-- Video Overlay Hint -->
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md rounded-full p-2 text-white/90 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[20px] block">videocam</span>
+</div>
+<!-- Hover Content -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Nature • 4K Video</span>
+<h3 class="text-white text-xl font-bold leading-tight">Highland Mist</h3>
+<p class="text-gray-300 text-sm mt-1 line-clamp-2">Early morning drone capture of the Scottish Highlands.</p>
+</div>
+</div>
+</div>
+<!-- Item 2: Photo -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.1s_forwards]">
+<div class="relative w-full aspect-[16/10]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Elegant bride holding flowers in soft light" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmgDh4xZbhLlYwRRAStasf_TsxV2HYhLwa-GiNr23OxTOsPNOy4FrkQaf7t_x_S4Y0gNt9M9q4lOVZTVzI95fNDlXrk4Uh5kYU7B9SNTSv8Ms4T7C6Ha7VQWNY8WnUqStBNtbqnzvZn0dC_EnGj83rHgvo1N63F0GdCChl2wEudLxnG6w4ZmCDbi3Do8U8AGqyPBVNeoUrCqO2aIiQe9S0ckJMmpv99camv6nnu81T1AWw1vmfLGqRaNmfo6l1H-XA8pbCy8SDwbk");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Weddings • Photo</span>
+<h3 class="text-white text-xl font-bold leading-tight">The White Veil</h3>
+</div>
+</div>
+</div>
+<!-- Item 3: Video -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.2s_forwards]">
+<div class="relative w-full aspect-[4/3]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Futuristic neon city lights at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVPdjxJybY9wU0WDuBXuSMxuBu71A6Zp6cVm8tTTJ4SbwFajzp7vHeaLgBDqrWDsqMy1DlLHnsL158SexxZYxiMWEYfvJ45RdvBFUqAFCpcE3VOt12G5cF7YKDai_y84HvRYPJ5ZLgVxB01PE2UoyJ4z0TQPPfUt8RWlyRl80lKQuhp2xzuNdzSxyAiLZrLJ61LFKksKsnfb-fYJY-vzcq1mg4ukEhvvbMdeMsHhdYMJgvTVVM6jk1OKDbxAQRr2NL0ToFpo0CqvQ");'></div>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md rounded-full p-2 text-white/90 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[20px] block">videocam</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Commercial • Teaser</span>
+<h3 class="text-white text-xl font-bold leading-tight">Cyber City</h3>
+</div>
+</div>
+</div>
+<!-- Item 4: Photo -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.3s_forwards]">
+<div class="relative w-full aspect-square">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Red sneaker product shot on white background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCl3NHdB9riRVYOxCKl-DOCZ_yTJp38oWBuz1WgkGrAa9t-vMRlFXOdjpV50nL-15EyH885bIi2MXcpvyyPSWpooN7V5WFkRyq7hsiMfWM7NjCj_1XK0GYWWu6lrsRi-TSgi_KKTLKiae7reKK_U_FYVtCqXvQCuhP5xXUPaOGCe2cbYNJk86JOpy0EXho2oUHk5crAwxIruZNl_s3Pc1EI0jTn-yC0nHyo-bXj0BxwkYkGMEcaESd1Lq4shh3ruU6fB64ez1hwVjk");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Commercial • Photo</span>
+<h3 class="text-white text-xl font-bold leading-tight">Apex Footwear</h3>
+</div>
+</div>
+</div>
+<!-- Item 5: Photo -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.4s_forwards]">
+<div class="relative w-full aspect-[3/4]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Moody dark landscape with a lone tree" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrZKpDmOk0U0CIJ0uUYQsOicyPCM4-crBF7CwQxDFn_iCGsjLTNxJ1AlCm99ZM-cqxaB_9IKQe-uIGOcbWn0ZMkDOAERxxMfzU7EPRxA8Mz_x8UnIce0M5uy870jzHFkcBLONJ27TWH1F_gzLivLObCSSoIXN2KtcTcpuNGrN7WmuJXABcFqXk0GLw2MH3eqEIJfWrojYv647Ldiit1Dvxif6hMka_NvxE5mdtb_y42qPWlQVcDXxn5u-T1D7Bi7xVi7Fd01HSdig");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Nature • Photo</span>
+<h3 class="text-white text-xl font-bold leading-tight">Solitude</h3>
+</div>
+</div>
+</div>
+<!-- Item 6: Video -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.5s_forwards]">
+<div class="relative w-full aspect-video">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Action shot of a mountain biker jumping" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4GXIxyf6WqTt9jpJC92Z9wDwp4dZeWA5RlMy6fRN_BZhDLYg7rYbRNbTR0xkRPb1uY9TKIvNbzmBEExhGGO4kyDOKUMb_hUza-BZWO99W8uMvPyvT4SsPMT1YRMgMsP2FaoXjz4rgGs5vJHWFd3_wat2aVfSbYxiDvrzGInubk2Uzdzw6gSkCXhPzDW2hOSUTK40yraaAabmiCQSN3a7aak4IMwLsiU9DRZ2m32_ZxWq7eT8Po6_gWP5SbeL0yzlITZdIhRBilTY");'></div>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md rounded-full p-2 text-white/90 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[20px] block">videocam</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Sports • Video</span>
+<h3 class="text-white text-xl font-bold leading-tight">Peak Performance</h3>
+</div>
+</div>
+</div>
+<!-- Item 7: Photo -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.6s_forwards]">
+<div class="relative w-full aspect-[3/4]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Couple holding hands at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqgO6l09L1B4EdCMvUmDvl_ja5qfdplS0R1ejpGA3cuVg7akJ9O6_9WWUmMeBb6J1bqabrpE2bvqYvSG2GaTPIP31jP5FT4gC9P_Fps4m0pNt7RkdEWUZaT8Mp-MGjcEqSq1qTpn8gZ1nF3SlJ7FiX0nwx1UBTdpMT03ZOgPjNvsuHJjND11vuAVa3qbml47VeDEKcKkJG5Qryayx-GeqnCQFuPKh8Au2R_8e7k4Ju9Lbyhaixg_fKuhv1hykEF-70Rv3BwNgIi60");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Weddings • Photo</span>
+<h3 class="text-white text-xl font-bold leading-tight">Golden Hour</h3>
+</div>
+</div>
+</div>
+<!-- Item 8: Video -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
+<div class="relative w-full aspect-[4/3]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Abstract macro shot of liquid textures" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdL-2nrvawmzjHcqM6Z_5WsckoqN2r9zG5vWufwGj5-u9nRXjpKK_x9MZLrktdYVRAKx0psl-W0j7zPO4z3VKE6IwCMQtDuxwMxx_5gxC8D1COT5oeX16A9sOhNXYWyTKvRNlGmLNh-kgomXKzVnJNd45xjzRdTT_nFBojJP_PHDQ77Z7PEurEp9nBtqx5ZYuTPxewTuWQ4W9eM4qp-q9Q7t77bykpmP0FDo-beJZeFzW2oWqZhbuYJN5Lx2E-7Ev5fDCAR14XD3E");'></div>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md rounded-full p-2 text-white/90 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[20px] block">videocam</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Abstract • Video</span>
+<h3 class="text-white text-xl font-bold leading-tight">Liquid Motion</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12 mb-8">
+<button class="flex items-center gap-2 px-8 py-3 rounded-lg border border-slate-300 dark:border-gray-700 text-slate-700 dark:text-white font-medium hover:bg-slate-100 dark:hover:bg-surface-dark transition-colors">
+<span>Load More Work</span>
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-slate-100 dark:bg-[#0b1218] border-t border-slate-200 dark:border-gray-800">
+<div class="max-w-[1440px] mx-auto px-6 md:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-lg font-bold text-slate-900 dark:text-white">LUMINA</span>
+<p class="text-slate-500 dark:text-gray-500 text-sm">© 2024 Lumina Studios. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Twitter</span>
+<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">YouTube</span>
+<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
