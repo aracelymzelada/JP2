@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Filmmaker Portfolio Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="relative min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<!-- Made absolute and transparent for the cinematic hero overlap -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 lg:px-20 transition-all duration-300 bg-gradient-to-b from-black/80 to-transparent backdrop-blur-[2px]">
+<div class="flex items-center gap-3 text-white">
+<div class="flex items-center justify-center size-8 bg-white/10 rounded-full backdrop-blur-md border border-white/20">
+<span class="material-symbols-outlined text-[20px]">movie</span>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tight uppercase">Lumina Films</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="#">Portfolio</a>
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="#">Services</a>
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="#">About</a>
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center rounded-full h-10 px-6 bg-primary hover:bg-primary/90 text-white text-sm font-bold tracking-wide transition-all shadow-[0_0_15px_rgba(19,127,236,0.5)]">
+                    Let's Talk
+                </button>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<!-- Using h-screen for full viewport height -->
+<section class="relative h-screen w-full flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+<!-- Background "Video" Placeholder (Image simulating video frame) -->
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" data-alt="Cinematic drone shot of foggy mountain peaks at sunrise" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCK6KFZee7xd_v4vvxSOhCuQiaoYy7APuLDFIr673imFkSslzVBK6Gh8Uc9N5eKB0vlWamva0uM3Zx6Xt-QYpy_LmqsamGotAB1GonvRlPEm3dmik3BWvfwwHxVOn318CZzCN9_U2u4ny_52ymScOtCww1Kdxupd2pUnx80XI8jiNG-yn7aFa62VYuJ9n9cr8HLKZK_uv_TE7iKmuut4uGUuujxGK4SUehTaEV3hzm6VyFgSygyjVP8a0nMghgR27gJW6-TKMLLXic");'>
+<div class="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#101922] via-transparent to-black/60"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 flex flex-col items-center gap-6 max-w-4xl animate-[fadeIn_1s_ease-out]">
+<div class="flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 backdrop-blur-md">
+<span class="block w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+<span class="text-xs font-medium text-white tracking-widest uppercase">Showreel 2024</span>
+</div>
+<h1 class="text-white text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter drop-shadow-lg">
+                    Capturing Life <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">In Motion</span>
+</h1>
+<p class="text-white/80 text-lg md:text-xl font-light max-w-2xl leading-relaxed">
+                    Award-winning cinematography &amp; aerial photography driving visual storytelling forward.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="flex items-center justify-center rounded-full h-12 px-8 bg-white text-black hover:bg-gray-200 text-sm font-bold tracking-wide transition-all">
+<span class="material-symbols-outlined text-[20px] mr-2">play_arrow</span>
+                        Watch Reel
+                    </button>
+<button class="flex items-center justify-center rounded-full h-12 px-8 border border-white/30 bg-transparent hover:bg-white/10 text-white text-sm font-bold tracking-wide backdrop-blur-sm transition-all">
+                        View Projects
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 animate-bounce">
+<span class="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
+<span class="material-symbols-outlined text-xl">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- Featured Projects Grid -->
+<section class="relative z-10 w-full px-4 md:px-10 lg:px-20 py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-[1400px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-slate-900 dark:text-white text-4xl font-bold tracking-tight mb-2">Featured Projects</h2>
+<p class="text-slate-500 dark:text-slate-400">Curated selection of our best cinematic work.</p>
+</div>
+<a class="group flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wide hover:underline" href="#">
+                        View All Works 
+                        <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Masonry-style Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px] lg:auto-rows-[350px]">
+<!-- Item 1 (Large) -->
+<div class="group relative md:col-span-2 rounded-xl overflow-hidden cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Wide cinematic shot of a futuristic cyberpunk city street at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPXvQmeiH7Nlsk0NfOGg5lomtLXLTp1UbqEcGmlq2-s4rIFX_3uYFlXAUlBRNyA8S17Em8ze4Fg7nuYARhtELSUiFrhfolrWAAjt1OGr2OSjGvHY3u50U_e2J6g0ULxTowbBEkdWICRgJJNySbteSqfYXuAnS9OE0UBBDBRSDrPwvuJsu96fjznhhXL2tXMnAuDgyZbd_mqy7RhxWwIDVqdICSsVrmXHaNTYx48phv-az-hrOxTHEd1uqojE6sS-2-hyRFjbRo6P8");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="inline-block px-2 py-1 mb-3 text-[10px] font-bold uppercase tracking-widest text-black bg-primary rounded-sm">Music Video</span>
+<h3 class="text-white text-2xl font-bold mb-1">Neon Nights</h3>
+<p class="text-white/70 text-sm line-clamp-2">A vibrant journey through the underground synthesizer scene of Tokyo.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Aerial view of a climber on a snowy mountain ridge" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfCCasQ-oo2IW6ypznGRlg9n7VnRllutQKKTqOJy4zlxpEH21agdH4Hffpxk2xGicsXm2BTKwSJSNiqczw6JO5wXr7I0sq8IJXIuc-IJlhRl7lDIGKOsckmYgjwvIwAVkYIaFk9iMLd_k-Qbg1bLIV5zWdnEgbbsh7OFvCwmj4k88c3Jta4UtHvPxp03oHbHQ6CBLYJ-Ek84OSHyssvukcioZm2ORijpdvIxy0b0iM0aQACor6iv7xaP7WoujlE8rQn7MJYpHzX4c");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="inline-block px-2 py-1 mb-3 text-[10px] font-bold uppercase tracking-widest text-black bg-white rounded-sm">Documentary</span>
+<h3 class="text-white text-xl font-bold mb-1">Alpine Ascent</h3>
+<p class="text-white/70 text-sm">Survival at 14,000 feet.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a luxury watch on a wrist with dark lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXv3YSMHHMZ_DAT39BxPbOjQ4YEB_sbzg2PO_Ns7g9zUJ0CIculbx3BjX30JzLLS0j9SSOSHck1zgnDNarACLhP_FysgiJYA6d6eVQYCrJ8VoPEGMc52BxJTA3Q7Y0FLZTZG0ymWfTMdl8BWuoHSwf5ld1mC5sHb5jN4yswQGX-dIL94R5r3YkXbiySbdmgJ7DzO3faqFHDOa4bagSRbOUGgrky1Hc-95eZ_xBLQho_I963BmxpCQargcJEDcRnQrs7TuNNEBlW4s");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="inline-block px-2 py-1 mb-3 text-[10px] font-bold uppercase tracking-widest text-black bg-white rounded-sm">Commercial</span>
+<h3 class="text-white text-xl font-bold mb-1">Timeless Luxury</h3>
+<p class="text-white/70 text-sm">Product campaign for Zenith.</p>
+</div>
+</div>
+<!-- Item 4 (Large) -->
+<div class="group relative md:col-span-2 rounded-xl overflow-hidden cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Fast red sports car drifting on a race track" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXGsvjdzcXsbKJddmpidufPw-yl1hDdoU9kjwt9WlOLobUVAWeXp-F9s4NXND-B6eLTTWXu62RiL9DX8M-wVUX-gnwY_XwdVEtOMmYZB3gx6BTgyzCEefDCw5OqDEkVDucOP12kdRNSDBBPjNTYeemETDvdWMTNj72MvVJqB64RIlZ8rBR5U2xkT2fEb3SiVbahnUoRNEn_dMxQZTR7m4e39LhHuqyPxUEKHyytPn2XRdZEWZLUDlxY50HymyeFNCqEeR42l3mj8w");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="inline-block px-2 py-1 mb-3 text-[10px] font-bold uppercase tracking-widest text-black bg-primary rounded-sm">Automotive</span>
+<h3 class="text-white text-2xl font-bold mb-1">Redline Racing</h3>
+<p class="text-white/70 text-sm line-clamp-2">Capturing the raw speed and adrenaline of the GT3 cup.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 px-4 md:px-10 lg:px-20 bg-slate-100 dark:bg-[#0d1218]">
+<div class="max-w-[1400px] mx-auto">
+<div class="flex flex-col lg:flex-row gap-16 items-start">
+<div class="flex-1 lg:sticky lg:top-24">
+<h2 class="text-slate-900 dark:text-white text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                            Comprehensive Visual Solutions.
+                        </h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg mb-8 max-w-lg">
+                            We don't just record footage; we engineer visual experiences. From concept to color grading, we handle every pixel.
+                        </p>
+<button class="flex items-center justify-center rounded-lg h-12 px-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold tracking-wide hover:opacity-90 transition-opacity">
+                            View Services Details
+                        </button>
+</div>
+<div class="flex-[1.5] grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+<!-- Service Card 1 -->
+<div class="p-8 rounded-xl bg-white dark:bg-[#151c24] border border-slate-200 dark:border-[#2a3441] shadow-sm hover:border-primary/50 transition-colors group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">flight</span>
+</div>
+<h3 class="text-slate-900 dark:text-white text-xl font-bold mb-3">Aerial Cinematography</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                FPV and heavy-lift drone operations with cinema-grade stabilization. Licensed pilots for urban and remote locations.
+                            </p>
+</div>
+<!-- Service Card 2 -->
+<div class="p-8 rounded-xl bg-white dark:bg-[#151c24] border border-slate-200 dark:border-[#2a3441] shadow-sm hover:border-primary/50 transition-colors group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">videocam</span>
+</div>
+<h3 class="text-slate-900 dark:text-white text-xl font-bold mb-3">Commercial Production</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                End-to-end production for brands. We handle casting, location scouting, direction, and on-set logistics.
+                            </p>
+</div>
+<!-- Service Card 3 -->
+<div class="p-8 rounded-xl bg-white dark:bg-[#151c24] border border-slate-200 dark:border-[#2a3441] shadow-sm hover:border-primary/50 transition-colors group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">movie_edit</span>
+</div>
+<h3 class="text-slate-900 dark:text-white text-xl font-bold mb-3">Post-Production</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                Professional editing, DaVinci Resolve color grading, VFX compositing, and immersive sound design.
+                            </p>
+</div>
+<!-- Service Card 4 -->
+<div class="p-8 rounded-xl bg-white dark:bg-[#151c24] border border-slate-200 dark:border-[#2a3441] shadow-sm hover:border-primary/50 transition-colors group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">photo_camera</span>
+</div>
+<h3 class="text-slate-900 dark:text-white text-xl font-bold mb-3">Photography</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                High-resolution stills for editorial, product, and landscape. Capturing the moments between the frames.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Footer Area -->
+<footer class="bg-[#05080a] text-white pt-20 pb-10 border-t border-white/5">
+<div class="px-4 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
+<!-- CTA -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-10 pb-20 border-b border-white/10">
+<div class="text-center md:text-left">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to tell your story?</h2>
+<p class="text-gray-400 max-w-md">Let's collaborate on your next visual masterpiece. We are currently accepting bookings for Q4 2024.</p>
+</div>
+<button class="flex items-center justify-center rounded-full h-14 px-8 bg-primary hover:bg-primary/90 text-white text-lg font-bold tracking-wide transition-all shadow-[0_0_25px_rgba(19,127,236,0.3)] shrink-0">
+                        Start a Project
+                    </button>
+</div>
+<!-- Footer Links -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-10 py-12">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-[24px]">movie</span>
+<span class="text-lg font-bold uppercase tracking-tight">Lumina</span>
+</div>
+<p class="text-gray-500 text-sm mb-4">
+                            Premium cinematography studio based in Los Angeles, available worldwide.
+                        </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><i class="fa-brands fa-instagram"></i>IG</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">YT</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">LI</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Sitemap</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Portfolio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">About</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Socials</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Vimeo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">YouTube</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contact</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li>hello@luminafilms.com</li>
+<li>+1 (555) 123-4567</li>
+<li>123 Sunset Blvd, Suite 400<br/>Los Angeles, CA 90028</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 text-xs text-gray-600">
+<p>© 2024 Lumina Films. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-gray-400" href="#">Privacy Policy</a>
+<a class="hover:text-gray-400" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
