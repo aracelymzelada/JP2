@@ -3,7 +3,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Work Portfolio Gallery</title>
+<title>Galeria de trabajos realizados</title>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Theme Configuration -->
@@ -122,26 +122,27 @@
 </div>
 <!-- Filter Chips -->
 <div class="flex flex-wrap justify-center gap-3 mb-12 select-none">
-<button class="group flex items-center gap-2 h-10 px-5 rounded-full bg-slate-200 dark:bg-surface-dark hover:bg-primary dark:hover:bg-primary transition-all duration-300 ring-1 ring-transparent focus:ring-primary active:scale-95">
-<span class="material-symbols-outlined text-[20px] text-slate-600 dark:text-gray-400 group-hover:text-white">grid_view</span>
-<span class="text-sm font-medium text-slate-700 dark:text-gray-300 group-hover:text-white">All</span>
+<div class="flex flex-wrap justify-center gap-3 mb-12 select-none" id="filter-container">
+<button data-filter="all" class="filter-btn active group flex items-center gap-2 h-10 px-5 rounded-full bg-primary text-white transition-all duration-300 active:scale-95">
+        <span class="material-symbols-outlined text-[20px]">grid_view</span>
+        <span class="text-sm font-medium">All</span>
 </button>
-<button class="group flex items-center gap-2 h-10 px-5 rounded-full bg-transparent border border-slate-300 dark:border-gray-700 hover:border-primary hover:bg-primary/5 transition-all duration-300 active:scale-95">
-<span class="text-sm font-medium text-slate-600 dark:text-gray-400 group-hover:text-primary">Bodas</span>
+<button data-filter="bodas" class="filter-btn group flex items-center gap-2 h-10 px-5 rounded-full bg-transparent border border-slate-300 dark:border-gray-700 hover:border-primary hover:bg-primary/5 transition-all duration-300 active:scale-95">
+        <span class="text-sm font-medium text-slate-600 dark:text-gray-400 group-hover:text-primary">Bodas</span>
 </button>
-<button class="group flex items-center gap-2 h-10 px-5 rounded-full bg-transparent border border-slate-300 dark:border-gray-700 hover:border-primary hover:bg-primary/5 transition-all duration-300 active:scale-95">
-<span class="text-sm font-medium text-slate-600 dark:text-gray-400 group-hover:text-primary">Comerciales</span>
+<button data-filter="comerciales" class="filter-btn group flex items-center gap-2 h-10 px-5 rounded-full bg-transparent border border-slate-300 dark:border-gray-700 hover:border-primary hover:bg-primary/5 transition-all duration-300 active:scale-95">
+        <span class="text-sm font-medium text-slate-600 dark:text-gray-400 group-hover:text-primary">Comerciales</span>
 </button>
-<button class="group flex items-center gap-2 h-10 px-5 rounded-full bg-transparent border border-slate-300 dark:border-gray-700 hover:border-primary hover:bg-primary/5 transition-all duration-300 active:scale-95">
-<span class="text-sm font-medium text-slate-600 dark:text-gray-400 group-hover:text-primary">Fotos</span>
+<button data-filter="fotos" class="filter-btn group flex items-center gap-2 h-10 px-5 rounded-full bg-transparent border border-slate-300 dark:border-gray-700 hover:border-primary hover:bg-primary/5 transition-all duration-300 active:scale-95">
+        <span class="text-sm font-medium text-slate-600 dark:text-gray-400 group-hover:text-primary">Fotos</span>
 </button>
 </div>
 <!-- Masonry Grid -->
 <div class="masonry-grid w-full">
 <!-- Item 1: Video -->
-<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_forwards]">
+<div data-category="comerciales" class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_forwards]">
 <div class="relative w-full aspect-[4/5] md:aspect-[3/4]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Majestic mountain landscape with morning fog" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCil3d_cSnJpCCI8x0z6YeqRL-Ub8f2pZqQj2NuGcoyk8ah3WYjV3rgj-bCexahG2HTT-A0UYXEaH52hzDXeEADqrQrQxVj0ve6-6DzaI1xYbLpmVjIsPrqOnfNzZtV-W-SrJ5-fIBudJQZuN5RGLnHDK45h_wCfErsHkGZnLIWQB6lqcLmwfKmxnHUAOHe-eSI04IXY3Sm7091W9e_uHrcdtJ6iOqpoQqgAhi7WmwKFPAaiC0F8a0nsgFwQ_RvyfvsT3OkyyC0Fmo");'></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Majestic mountain landscape with morning fog" style='background-image: url("img/IMG_1356.JPG");'></div>
 <!-- Video Overlay Hint -->
 <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md rounded-full p-2 text-white/90 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
 <span class="material-symbols-outlined text-[20px] block">videocam</span>
@@ -155,9 +156,9 @@
 </div>
 </div>
 <!-- Item 2: Photo -->
-<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.1s_forwards]">
+<div data-category="bodas" class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.1s_forwards]">
 <div class="relative w-full aspect-[16/10]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Elegant bride holding flowers in soft light" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmgDh4xZbhLlYwRRAStasf_TsxV2HYhLwa-GiNr23OxTOsPNOy4FrkQaf7t_x_S4Y0gNt9M9q4lOVZTVzI95fNDlXrk4Uh5kYU7B9SNTSv8Ms4T7C6Ha7VQWNY8WnUqStBNtbqnzvZn0dC_EnGj83rHgvo1N63F0GdCChl2wEudLxnG6w4ZmCDbi3Do8U8AGqyPBVNeoUrCqO2aIiQe9S0ckJMmpv99camv6nnu81T1AWw1vmfLGqRaNmfo6l1H-XA8pbCy8SDwbk");'></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Elegant bride holding flowers in soft light" style='background-image: url("img/MOR7223.jpg");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Weddings • Photo</span>
 <h3 class="text-white text-xl font-bold leading-tight">The White Veil</h3>
@@ -165,9 +166,9 @@
 </div>
 </div>
 <!-- Item 3: Video -->
-<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.2s_forwards]">
+<div data-category="fotos" class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.4s_forwards]">
 <div class="relative w-full aspect-[4/3]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Futuristic neon city lights at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVPdjxJybY9wU0WDuBXuSMxuBu71A6Zp6cVm8tTTJ4SbwFajzp7vHeaLgBDqrWDsqMy1DlLHnsL158SexxZYxiMWEYfvJ45RdvBFUqAFCpcE3VOt12G5cF7YKDai_y84HvRYPJ5ZLgVxB01PE2UoyJ4z0TQPPfUt8RWlyRl80lKQuhp2xzuNdzSxyAiLZrLJ61LFKksKsnfb-fYJY-vzcq1mg4ukEhvvbMdeMsHhdYMJgvTVVM6jk1OKDbxAQRr2NL0ToFpo0CqvQ");'></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Futuristic neon city lights at night" style='background-image: url("img/SIU2109.jpg");'></div>
 <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md rounded-full p-2 text-white/90 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
 <span class="material-symbols-outlined text-[20px] block">videocam</span>
 </div>
@@ -178,9 +179,9 @@
 </div>
 </div>
 <!-- Item 4: Photo -->
-<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.3s_forwards]">
+<div data-category="comerciales" class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_forwards]">
 <div class="relative w-full aspect-square">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Red sneaker product shot on white background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCl3NHdB9riRVYOxCKl-DOCZ_yTJp38oWBuz1WgkGrAa9t-vMRlFXOdjpV50nL-15EyH885bIi2MXcpvyyPSWpooN7V5WFkRyq7hsiMfWM7NjCj_1XK0GYWWu6lrsRi-TSgi_KKTLKiae7reKK_U_FYVtCqXvQCuhP5xXUPaOGCe2cbYNJk86JOpy0EXho2oUHk5crAwxIruZNl_s3Pc1EI0jTn-yC0nHyo-bXj0BxwkYkGMEcaESd1Lq4shh3ruU6fB64ez1hwVjk");'></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Red sneaker product shot on white background" style='background-image: url("img/MOR7004.jpg");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Commercial • Photo</span>
 <h3 class="text-white text-xl font-bold leading-tight">Apex Footwear</h3>
@@ -188,9 +189,9 @@
 </div>
 </div>
 <!-- Item 5: Photo -->
-<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.4s_forwards]">
+<div data-category="fotos" class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.4s_forwards]">
 <div class="relative w-full aspect-[3/4]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Moody dark landscape with a lone tree" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrZKpDmOk0U0CIJ0uUYQsOicyPCM4-crBF7CwQxDFn_iCGsjLTNxJ1AlCm99ZM-cqxaB_9IKQe-uIGOcbWn0ZMkDOAERxxMfzU7EPRxA8Mz_x8UnIce0M5uy870jzHFkcBLONJ27TWH1F_gzLivLObCSSoIXN2KtcTcpuNGrN7WmuJXABcFqXk0GLw2MH3eqEIJfWrojYv647Ldiit1Dvxif6hMka_NvxE5mdtb_y42qPWlQVcDXxn5u-T1D7Bi7xVi7Fd01HSdig");'></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Moody dark landscape with a lone tree" style='background-image: url("img/MOR7478.jpg");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Nature • Photo</span>
 <h3 class="text-white text-xl font-bold leading-tight">Solitude</h3>
@@ -198,9 +199,9 @@
 </div>
 </div>
 <!-- Item 6: Video -->
-<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.5s_forwards]">
+<div data-category="bodas" class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.1s_forwards]">
 <div class="relative w-full aspect-video">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Action shot of a mountain biker jumping" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4GXIxyf6WqTt9jpJC92Z9wDwp4dZeWA5RlMy6fRN_BZhDLYg7rYbRNbTR0xkRPb1uY9TKIvNbzmBEExhGGO4kyDOKUMb_hUza-BZWO99W8uMvPyvT4SsPMT1YRMgMsP2FaoXjz4rgGs5vJHWFd3_wat2aVfSbYxiDvrzGInubk2Uzdzw6gSkCXhPzDW2hOSUTK40yraaAabmiCQSN3a7aak4IMwLsiU9DRZ2m32_ZxWq7eT8Po6_gWP5SbeL0yzlITZdIhRBilTY");'></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Action shot of a mountain biker jumping" style='background-image: url("img/bodas.JPG");'></div>
 <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md rounded-full p-2 text-white/90 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
 <span class="material-symbols-outlined text-[20px] block">videocam</span>
 </div>
@@ -211,9 +212,9 @@
 </div>
 </div>
 <!-- Item 7: Photo -->
-<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.6s_forwards]">
+<div data-category="bodas" class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.1s_forwards]">
 <div class="relative w-full aspect-[3/4]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Couple holding hands at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqgO6l09L1B4EdCMvUmDvl_ja5qfdplS0R1ejpGA3cuVg7akJ9O6_9WWUmMeBb6J1bqabrpE2bvqYvSG2GaTPIP31jP5FT4gC9P_Fps4m0pNt7RkdEWUZaT8Mp-MGjcEqSq1qTpn8gZ1nF3SlJ7FiX0nwx1UBTdpMT03ZOgPjNvsuHJjND11vuAVa3qbml47VeDEKcKkJG5Qryayx-GeqnCQFuPKh8Au2R_8e7k4Ju9Lbyhaixg_fKuhv1hykEF-70Rv3BwNgIi60");'></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Couple holding hands at sunset" style='background-image: url("img/MOR7291.jpg");'></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Weddings • Photo</span>
 <h3 class="text-white text-xl font-bold leading-tight">Golden Hour</h3>
@@ -221,9 +222,9 @@
 </div>
 </div>
 <!-- Item 8: Video -->
-<div class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_0.7s_forwards]">
+<div data-category="comerciales" class="masonry-item group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-surface-dark cursor-pointer animate-[fadeIn_0.5s_ease-out_forwards]">
 <div class="relative w-full aspect-[4/3]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Abstract macro shot of liquid textures" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdL-2nrvawmzjHcqM6Z_5WsckoqN2r9zG5vWufwGj5-u9nRXjpKK_x9MZLrktdYVRAKx0psl-W0j7zPO4z3VKE6IwCMQtDuxwMxx_5gxC8D1COT5oeX16A9sOhNXYWyTKvRNlGmLNh-kgomXKzVnJNd45xjzRdTT_nFBojJP_PHDQ77Z7PEurEp9nBtqx5ZYuTPxewTuWQ4W9eM4qp-q9Q7t77bykpmP0FDo-beJZeFzW2oWqZhbuYJN5Lx2E-7Ev5fDCAR14XD3E");'></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Abstract macro shot of liquid textures" style='background-image: url("img/DSC07044.jpg");'></div>
 <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md rounded-full p-2 text-white/90 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
 <span class="material-symbols-outlined text-[20px] block">videocam</span>
 </div>
@@ -233,12 +234,6 @@
 </div>
 </div>
 </div>
-</div>
-<div class="flex justify-center mt-12 mb-8">
-<button class="flex items-center gap-2 px-8 py-3 rounded-lg border border-slate-300 dark:border-gray-700 text-slate-700 dark:text-white font-medium hover:bg-slate-100 dark:hover:bg-surface-dark transition-colors">
-<span>Load More Work</span>
-<span class="material-symbols-outlined text-[20px]">expand_more</span>
-</button>
 </div>
 </main>
 <!-- Footer -->
@@ -264,4 +259,43 @@
 </div>
 </div>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.masonry-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filterValue = button.getAttribute('data-filter');
+
+            // 1. Actualizar estilos de botones
+            filterButtons.forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-white');
+                btn.classList.add('bg-transparent', 'border', 'border-slate-300', 'dark:border-gray-700');
+                // Resetear color de iconos/texto internos si es necesario
+                const span = btn.querySelector('span:last-child');
+                if(span) span.classList.replace('text-white', 'text-slate-600');
+            });
+
+            button.classList.add('bg-primary', 'text-white');
+            button.classList.remove('bg-transparent', 'border-slate-300', 'dark:border-gray-700');
+
+            // 2. Lógica de filtrado
+            galleryItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+
+                if (filterValue === 'all' || itemCategory === filterValue) {
+                    item.style.display = 'block';
+                    // Reiniciar animación
+                    item.style.animation = 'none';
+                    item.offsetHeight; // trigger reflow
+                    item.style.animation = null;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
 </body></html>
