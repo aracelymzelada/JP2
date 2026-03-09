@@ -1,87 +1,93 @@
 <!DOCTYPE html>
-<link rel="icon" href="img/favicon.ico" />
-<meta name="description" content="Filmmaker specializing in cinematic storytelling, commercial direction and documentary filmmaking.">
-<html class="dark" lang="en"><head>
+<html class="dark" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>About the Filmmaker</title>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts & Material Symbols from index.html -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="tailwind.config.js"></script>
-    <!-- Custom Styles -->
-    <link href="styles.css" rel="stylesheet"/>
+<!-- Custom Styles -->
+<link href="styles.css" rel="stylesheet"/>
 </head>
-<body class="dark:bg-background-dark text-[#111418] dark:text-white font-display antialiased overflow-x-hidden">
-<div class="relative flex min-h-screen flex-col">
-<!-- Navigation -->
-<header class="sticky top-0 z-50 border-b border-solid border-border-dark/50 bg-background-dark/80 backdrop-blur-md px-4 lg:px-40 py-3">
-<div class="flex items-center justify-between whitespace-nowrap max-w-[1200px] mx-auto w-full">
-<div class="flex items-center gap-4 text-white">
-<div class="size-6 text-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-2xl">movie_filter</span>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="relative min-h-screen flex flex-col">
+
+<!-- Top Navigation (Matched perfectly with index.html) -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 lg:px-20 transition-all duration-300 bg-gradient-to-b from-black/80 to-transparent backdrop-blur-[2px]">
+<div class="flex items-center gap-3 text-white">
+    <img src="img/JPfilmsRD.png" alt="Logo" class="w-auto h-8 object-contain">
+    <h2 class="text-white text-xl font-bold tracking-tight uppercase">JP Films RD</h2>
 </div>
-<h2 class="text-white text-lg font-bold leading-tight tracking-wide">JP / FILMS RD</h2>
-</div>
-<div class="flex flex-1 justify-end gap-8">
-<div class="hidden md:flex items-center gap-9">
-<a class="text-gray-300 hover:text-white transition-colors text-sm font-medium leading-normal" href="portafolio.html" target="_blank">Portafolio</a>
-<a class="text-white text-sm font-medium leading-normal" href="services.html" target="_blank">Servicios</a>
-<a class="text-gray-300 hover:text-white transition-colors text-sm font-medium leading-normal" href="contact.html" target="_blank">Contacto</a>
-</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="portafolio.html" target="_blank">Portafolio</a>
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="services.html" target="_blank">Servicios</a>
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="aboutme.html" target="_blank">Sobre mi</a>
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="contact.html" target="_blank">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
 <a 
   href="https://wa.me/502XXXXXXXX"
   target="_blank"
   rel="noopener noreferrer"
   class="flex min-w-[84px] items-center justify-center overflow-hidden rounded h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-wide shadow-[0_0_15px_rgba(6,42,224,0.3)]"
 >
-  <span class="truncate">WhatsApp</span>
+  <span class="truncate">Cotiza tu video!</span>
 </a>
-</div>
+<button class="md:hidden flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
 </div>
 </header>
+
 <!-- Main Content Wrapper -->
-<main class="flex-1 flex flex-col items-center w-full px-4 lg:px-40 pb-20">
-<div class="max-w-[1200px] w-full flex flex-col gap-16 md:gap-24 pt-10 md:pt-16">
+<main class="relative flex min-h-screen w-full flex-col pt-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-[1400px] mx-auto w-full px-4 md:px-10 lg:px-20 pb-20">
+<div class="flex flex-col gap-16 md:gap-24 pt-10 md:pt-16">
+
 <!-- Hero Section -->
 <section class="@container">
 <div class="flex flex-col-reverse md:flex-row gap-10 md:gap-16 items-center md:items-start">
 <!-- Text Content -->
 <div class="flex flex-col gap-6 flex-1 pt-4 md:pt-10">
 <div class="flex flex-col gap-4 text-left">
-<h1 class="text-white text-5xl md:text-7xl font-light italic leading-[1.1] tracking-tight">
+<h1 class="text-slate-900 dark:text-white text-5xl md:text-7xl font-light italic leading-[1.1] tracking-tight">
                                     The Story <br/>
-<span class="font-bold not-italic text-white">Behind the Lens</span>
+<span class="font-bold not-italic text-slate-900 dark:text-white">Behind the Lens</span>
 </h1>
 <div class="w-12 h-1 bg-primary rounded-full my-2"></div>
-<h2 class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-lg">
+<h2 class="text-slate-600 dark:text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-lg">
                                     Capturing the unseen moments between silence and chaos. A journey through light, shadow, and narrative depth.
                                 </h2>
 </div>
 <div class="pt-4 flex gap-4">
-<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded h-12 px-6 bg-white text-background-dark text-base font-bold leading-normal tracking-wide hover:bg-gray-200 transition-colors">
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-slate-900 dark:bg-white text-white dark:text-black text-base font-bold leading-normal tracking-wide hover:opacity-80 transition-opacity">
 <span class="truncate">Watch Showreel</span>
 <span class="material-symbols-outlined ml-2 text-sm">play_arrow</span>
 </button>
-<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded h-12 px-6 border border-border-dark bg-transparent text-white text-base font-medium leading-normal tracking-wide hover:bg-surface-dark transition-colors">
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 border border-slate-300 dark:border-white/30 bg-transparent text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-all font-bold tracking-wide backdrop-blur-sm">
 <span class="truncate">Download CV</span>
 </button>
 </div>
 </div>
 <!-- Portrait Image -->
 <div class="w-full md:w-[45%] lg:w-[40%]">
-<div class="relative w-full aspect-[3/4] overflow-hidden rounded-sm shadow-2xl shadow-black/50 group">
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent z-10 opacity-60"></div>
-<div class="w-full h-full bg-center bg-no-repeat bg-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-105" data-alt="Black and white artistic portrait of the filmmaker looking contemplative" style='background-image: url("img/SIU2109.jpg");'>
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded-xl shadow-lg group">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-60"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out transform group-hover:scale-105 bg-about-portrait" data-alt="Black and white artistic portrait of the filmmaker looking contemplative">
 </div>
 </div>
 </div>
 </div>
 </section>
+
 <!-- Editorial Bio Section -->
 <section class="flex flex-col gap-8">
-<div class="border-b border-border-dark pb-4">
-<h2 class="text-white text-3xl font-bold leading-tight tracking-tight">The Journey &amp; Philosophy</h2>
+<div class="border-b border-slate-200 dark:border-white/10 pb-4">
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-tight">The Journey &amp; Philosophy</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
 <!-- Column 1 -->
@@ -90,10 +96,10 @@
 <span class="material-symbols-outlined">history_edu</span>
 <span class="text-sm font-bold tracking-widest uppercase">Origins</span>
 </div>
-<p class="text-gray-300 text-lg leading-loose font-light">
-<span class="text-white text-3xl float-left mr-2 mt-[-6px] font-display italic">M</span>y fascination with visual storytelling began in the darkroom, developing 35mm film rolls by hand. That tactile connection to the medium taught me to value every single frame. Transitioning into the digital cinema era, I carried this discipline with me—treating high-resolution sensors like celluloid canvas.
+<p class="text-slate-700 dark:text-gray-300 text-lg leading-loose font-light">
+<span class="text-slate-900 dark:text-white text-3xl float-left mr-2 mt-[-6px] font-display italic">M</span>y fascination with visual storytelling began in the darkroom, developing 35mm film rolls by hand. That tactile connection to the medium taught me to value every single frame. Transitioning into the digital cinema era, I carried this discipline with me—treating high-resolution sensors like celluloid canvas.
                             </p>
-<p class="text-gray-300 text-lg leading-loose font-light">
+<p class="text-slate-700 dark:text-gray-300 text-lg leading-loose font-light">
                                 Over the last decade, I've directed commercial spots for Fortune 500 brands and intimate documentaries in remote corners of the globe. Regardless of the scale, the core mission remains the same: to find the human truth buried under the noise.
                             </p>
 </div>
@@ -104,88 +110,141 @@
 <span class="text-sm font-bold tracking-widest uppercase">Approach</span>
 </div>
 <blockquote class="border-l-2 border-primary pl-6 py-2 my-2">
-<p class="text-white text-xl italic leading-relaxed">
+<p class="text-slate-900 dark:text-white text-xl italic leading-relaxed">
                                     "Light is not just illumination; it is the brush with which we paint the subtext of a scene."
                                 </p>
 </blockquote>
-<p class="text-gray-300 text-lg leading-loose font-light">
+<p class="text-slate-700 dark:text-gray-300 text-lg leading-loose font-light">
                                 I prioritize narrative over spectacle. While I utilize cutting-edge technology—from heavy-lift drones to large-format cinema cameras—every movement is motivated by emotion. My visual philosophy is grounded in contrast: the interplay of shadow and light that mirrors the internal conflict of the characters I film.
                             </p>
 </div>
 </div>
 </section>
+
 <!-- Gear Section -->
-<section class="flex flex-col gap-8">
-<div class="flex items-end justify-between border-b border-border-dark pb-4">
-<h3 class="text-white text-2xl font-bold leading-tight tracking-tight">Gear &amp; Equipment</h3>
-<span class="text-gray-500 text-sm font-mono">TECHNICAL LOADOUT v2.4</span>
+<section class="flex flex-col gap-8 pb-10">
+<div class="flex items-end justify-between border-b border-slate-200 dark:border-white/10 pb-4">
+<h3 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-tight">Gear &amp; Equipment</h3>
+<span class="text-slate-500 text-sm font-mono">TECHNICAL LOADOUT v2.4</span>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 <!-- Item 1 -->
-<div class="group bg-surface-dark border border-border-dark p-6 rounded hover:border-primary/50 transition-colors duration-300 flex flex-col gap-4">
-<div class="size-12 rounded bg-background-dark flex items-center justify-center text-primary group-hover:text-white transition-colors">
+<div class="group bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-6 rounded-xl hover:border-primary/50 transition-colors duration-300 flex flex-col gap-4">
+<div class="size-12 rounded bg-slate-200 dark:bg-black/30 flex items-center justify-center text-primary group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-2xl">videocam</span>
 </div>
 <div>
-<h4 class="text-white font-bold text-lg">RED V-Raptor</h4>
-<p class="text-gray-400 text-sm mt-1">8K VV Cinema Camera for uncompromised resolution and dynamic range.</p>
+<h4 class="text-slate-900 dark:text-white font-bold text-lg">RED V-Raptor</h4>
+<p class="text-slate-600 dark:text-gray-400 text-sm mt-1">8K VV Cinema Camera for uncompromised resolution and dynamic range.</p>
 </div>
 </div>
 <!-- Item 2 -->
-<div class="group bg-surface-dark border border-border-dark p-6 rounded hover:border-primary/50 transition-colors duration-300 flex flex-col gap-4">
-<div class="size-12 rounded bg-background-dark flex items-center justify-center text-primary group-hover:text-white transition-colors">
+<div class="group bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-6 rounded-xl hover:border-primary/50 transition-colors duration-300 flex flex-col gap-4">
+<div class="size-12 rounded bg-slate-200 dark:bg-black/30 flex items-center justify-center text-primary group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-2xl">flight</span>
 </div>
 <div>
-<h4 class="text-white font-bold text-lg">DJI Mavic 3 Cine</h4>
-<p class="text-gray-400 text-sm mt-1">Aerial cinematography with Apple ProRes 422 HQ capabilities.</p>
+<h4 class="text-slate-900 dark:text-white font-bold text-lg">DJI Mavic 3 Cine</h4>
+<p class="text-slate-600 dark:text-gray-400 text-sm mt-1">Aerial cinematography with Apple ProRes 422 HQ capabilities.</p>
 </div>
 </div>
 <!-- Item 3 -->
-<div class="group bg-surface-dark border border-border-dark p-6 rounded hover:border-primary/50 transition-colors duration-300 flex flex-col gap-4">
-<div class="size-12 rounded bg-background-dark flex items-center justify-center text-primary group-hover:text-white transition-colors">
+<div class="group bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-6 rounded-xl hover:border-primary/50 transition-colors duration-300 flex flex-col gap-4">
+<div class="size-12 rounded bg-slate-200 dark:bg-black/30 flex items-center justify-center text-primary group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-2xl">camera</span>
 </div>
 <div>
-<h4 class="text-white font-bold text-lg">Sony Alpha 1</h4>
-<p class="text-gray-400 text-sm mt-1">Hybrid powerhouse for high-speed stills and run-and-gun video.</p>
+<h4 class="text-slate-900 dark:text-white font-bold text-lg">Sony Alpha 1</h4>
+<p class="text-slate-600 dark:text-gray-400 text-sm mt-1">Hybrid powerhouse for high-speed stills and run-and-gun video.</p>
 </div>
 </div>
 <!-- Item 4 -->
-<div class="group bg-surface-dark border border-border-dark p-6 rounded hover:border-primary/50 transition-colors duration-300 flex flex-col gap-4">
-<div class="size-12 rounded bg-background-dark flex items-center justify-center text-primary group-hover:text-white transition-colors">
+<div class="group bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-6 rounded-xl hover:border-primary/50 transition-colors duration-300 flex flex-col gap-4">
+<div class="size-12 rounded bg-slate-200 dark:bg-black/30 flex items-center justify-center text-primary group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-2xl">tune</span>
 </div>
 <div>
-<h4 class="text-white font-bold text-lg">DaVinci Resolve</h4>
-<p class="text-gray-400 text-sm mt-1">Full color grading suite with Mini Panel for precise look development.</p>
+<h4 class="text-slate-900 dark:text-white font-bold text-lg">DaVinci Resolve</h4>
+<p class="text-slate-600 dark:text-gray-400 text-sm mt-1">Full color grading suite with Mini Panel for precise look development.</p>
 </div>
 </div>
 </div>
 </section>
-<!-- Footer / CTA -->
-<footer class="mt-12 flex flex-col items-center gap-8 border-t border-border-dark pt-16 pb-8">
-<div class="text-center space-y-2">
-<p class="text-gray-400 text-sm uppercase tracking-widest">Animate a crear conmigo algo que perdure en el tiempo</p>
-<div class="signature text-5xl md:text-7xl text-white opacity-90 py-4">
-                            JP Films RD
-                        </div>
+
 </div>
-<div class="flex gap-6">
-<a class="size-10 rounded-full bg-surface-dark flex items-center justify-center text-white hover:bg-primary transition-colors" href="#">
-<!-- Instagram SVG placeholder using text for simplicity or custom path -->
-<span class="font-bold text-sm">IG</span>
-</a>
-<a class="size-10 rounded-full bg-surface-dark flex items-center justify-center text-white hover:bg-primary transition-colors" href="#">
-<span class="font-bold text-sm">LI</span>
-</a>
-<a class="size-10 rounded-full bg-surface-dark flex items-center justify-center text-white hover:bg-primary transition-colors" href="#">
-<span class="font-bold text-sm">VM</span>
-</a>
-</div>
-<p class="text-gray-600 text-xs mt-8">© 2026 JP Films RD TODOS los derechos Reservados.</p>
-</footer>
 </div>
 </main>
+
+<!-- Footer Top & Bottom (Matched perfectly with index.html) -->
+<footer class="bg-[#05080a] text-white pt-20 pb-10 border-t border-white/5">
+<div class="px-4 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
+<!-- CTA -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-10 pb-20 border-b border-white/10">
+<div class="text-center md:text-left">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Listo para grabar tu historia?</h2>
+<p class="text-gray-400 max-w-md">Trabajemos juntos en tu siguiente audivisual. Tenemos algunas citas disponibles todavia para este 2026.</p>
 </div>
-</body></html>
+<a 
+  href="https://wa.me/502XXXXXXXX"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="flex min-w-[84px] items-center justify-center overflow-hidden rounded h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-wide shadow-[0_0_15px_rgba(6,42,224,0.3)]"
+>
+  <span class="truncate">Hagamos tu video</span>
+</a>
+</div>
+<!-- Footer Links -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-10 py-12">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+    <img src="img/JPfilmsRD.png" alt="Logo" class="w-auto h-8 object-contain filter brightness-0 invert opacity-80">
+<span class="text-lg font-bold uppercase tracking-tight">JP films RD</span>
+</div>
+<p class="text-gray-500 text-sm mb-4">
+                            Premium cinematography studio based in Los Angeles, available worldwide.
+                        </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><i class="fa-brands fa-instagram"></i>IG</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">YT</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">LI</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Sitemap</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Portafolio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">About</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Socials</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Vimeo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">YouTube</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contact</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li>hello@somewherefilms.com</li>
+<li>+1 (555) 123-4567</li>
+<li>123 Sunset Blvd, Suite 400<br/>Los Angeles, CA 90028</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 text-xs text-gray-600">
+<p>© 2026 JP Films RD. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-gray-400" href="#">Privacy Policy</a>
+<a class="hover:text-gray-400" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
