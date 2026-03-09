@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Common variables (if needed across themes) */
+  :root {
+    /* Brand Colors */
+    --color-primary-default: #137fec; /* primary from index, portafolio, services */
+    --color-primary-alt: #062ae0; /* primary from aboutme */
+    --color-primary-light: #607AFB; /* primary from contact */
+    
+    /* Backgrounds */
+    --color-bg-light: #f6f7f8;
+    --color-bg-dark: #101922;
+    --color-surface-dark: #1c2632;
+    --color-surface-alt: #151b33;
+    --color-border-dark: #21284a;
+
+    /* Text */
+    --color-text-main: #111418;
+    --color-text-muted: #617589;
+  }
+}
+
+/* Custom scrollbar for a premium feel */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #101922; 
+}
+::-webkit-scrollbar-thumb {
+    background: #283039; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3f4a56; 
+}
+
+/* Specific overrides for Dark Mode Custom Scrollbar (from aboutme/portafolio) */
+.dark ::-webkit-scrollbar-track {
+    background: #0f1323; 
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #21284a; 
+    border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #062ae0; 
+}
+
+/* Additional Custom Classes */
+.signature {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.masonry-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+@media (min-width: 640px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+@media (min-width: 1024px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}

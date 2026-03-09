@@ -8,25 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#137fec",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Noto Sans", "sans-serif"],
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
+<script src="tailwind.config.js"></script>
+    <!-- Custom Styles -->
+    <link href="styles.css" rel="stylesheet"/>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-white">
 <div class="relative min-h-screen flex flex-col">
@@ -34,11 +18,8 @@
 <!-- Made absolute and transparent for the cinematic hero overlap -->
 <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 lg:px-20 transition-all duration-300 bg-gradient-to-b from-black/80 to-transparent backdrop-blur-[2px]">
 <div class="flex items-center gap-3 text-white">
-<div class="flex items-center justify-center size-8 bg-white/10 rounded-full backdrop-blur-md border border-white/20">
-    <!-- Replace the span with the line below -->
-    <img="JPfilmsRD.png" alt="Logo" class="size-5 object-contain">
-</div>
-<h2 class="text-white text-xl font-bold tracking-tight uppercase">JP Films RD</h2>
+    <img src="img/JPfilmsRD.png" alt="Logo" class="w-auto h-8 object-contain">
+    <h2 class="text-white text-xl font-bold tracking-tight uppercase">JP Films RD</h2>
 </div>
 <nav class="hidden md:flex items-center gap-8">
 <a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="portafolio.html">Portafolio</a>
@@ -55,6 +36,7 @@
 >
   <span class="truncate">Cotiza tu video!</span>
 </a>
+<button class="md:hidden flex items-center justify-center text-white">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>

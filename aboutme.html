@@ -8,48 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#062ae0",
-                        "background-light": "#f5f6f8",
-                        "background-dark": "#0f1323",
-                        "surface-dark": "#151b33",
-                        "border-dark": "#21284a",
-                    },
-                    fontFamily: {
-                        "display": ["Newsreader", "serif"],
-                        "sans": ["Noto Sans", "sans-serif"],
-                    },
-                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-                },
-            },
-        }
-    </script>
-<style>
-        /* Custom scrollbar for a premium feel */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f1323; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #21284a; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #062ae0; 
-        }
-        .signature {
-            font-family: 'Newsreader', serif;
-            font-style: italic;
-            font-weight: 300;
-        }
-    </style>
+<script src="tailwind.config.js"></script>
+    <!-- Custom Styles -->
+    <link href="styles.css" rel="stylesheet"/>
 </head>
 <body class="dark:bg-background-dark text-[#111418] dark:text-white font-display antialiased overflow-x-hidden">
 <div class="relative flex min-h-screen flex-col">
