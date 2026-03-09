@@ -13,20 +13,17 @@
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased transition-colors duration-300 min-h-screen flex flex-col">
 <!-- Header -->
-<header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-background-light/90 dark:bg-background-dark/90 border-b border-gray-200 dark:border-gray-800 transition-colors">
-<div class="max-w-[1440px] mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
-<div class="flex items-center gap-4">
-<div class="size-8 text-primary">
-<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">JP Fimls RD</h1>
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 lg:px-20 transition-all duration-300 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+    <img src="img/JPfilmsRD.png" alt="Logo" class="w-auto h-8 object-contain">
+    <h2 class="text-xl font-bold tracking-tight uppercase">JP Films RD</h2>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="index.html" target="_blank">Inicio</a>
-<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="services.html" target="_blank">Servicios</a>
-<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="contact.html" target="_blank">Contacto</a>
+<a class="text-slate-600 dark:text-white/80 hover:text-primary dark:hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="index.html">Inicio</a>
+<a class="text-slate-600 dark:text-white/80 hover:text-primary dark:hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="portafolio.html" target="_blank">Portafolio</a>
+<a class="text-slate-600 dark:text-white/80 hover:text-primary dark:hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="services.html" target="_blank">Servicios</a>
+<a class="text-slate-600 dark:text-white/80 hover:text-primary dark:hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="aboutme.html" target="_blank">Sobre mi</a>
+<a class="text-slate-600 dark:text-white/80 hover:text-primary dark:hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="contact.html" target="_blank">Contacto</a>
 </nav>
 <div class="flex items-center gap-4">
 <a 
@@ -35,14 +32,14 @@
   rel="noopener noreferrer"
   class="flex min-w-[84px] items-center justify-center overflow-hidden rounded h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-wide shadow-[0_0_15px_rgba(6,42,224,0.3)]"
 >
-  <span class="truncate">WhatsApp</span>
+  <span class="truncate">Cotiza tu video!</span>
 </a>
-<span class="material-symbols-outlined">menu</span>
+<button class="md:hidden flex items-center justify-center text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
-</div>
 </header>
-<main class="flex-grow flex flex-col w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 py-8">
+<main class="flex-grow flex flex-col w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 py-8 mt-24">
 <!-- Hero / Title Section -->
 <div class="flex flex-col items-center justify-center py-10 md:py-16 space-y-4">
 <h2 class="text-3xl md:text-5xl font-bold text-center tracking-tight text-slate-900 dark:text-white uppercase">
@@ -168,26 +165,73 @@
 </div>
 </div>
 </main>
-<!-- Footer -->
-<footer class="w-full bg-slate-100 dark:bg-[#0b1218] border-t border-slate-200 dark:border-gray-800">
-<div class="max-w-[1440px] mx-auto px-6 md:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-<div class="flex flex-col items-center md:items-start gap-2">
-<span class="text-lg font-bold text-slate-900 dark:text-white">JP Films RD</span>
-<p class="text-slate-500 dark:text-gray-500 text-sm">© 2026 JP Films RD. TODOS los derechos Reservados.</p>
+<!-- Footer Area -->
+<footer class="bg-[#05080a] text-white pt-20 pb-10 border-t border-white/5">
+<div class="px-4 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
+<!-- CTA -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-10 pb-20 border-b border-white/10">
+<div class="text-center md:text-left">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Listo para grabar tu historia?</h2>
+<p class="text-gray-400 max-w-md">Trabajemos juntos en tu siguiente audivisual. Tenemos algunas citas disponibles todavia para este 2026.</p>
 </div>
-<div class="flex gap-6">
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="sr-only">Instagram</span>
-<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+<a 
+  href="https://wa.me/502XXXXXXXX"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="flex min-w-[84px] items-center justify-center overflow-hidden rounded h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-wide shadow-[0_0_15px_rgba(6,42,224,0.3)]"
+>
+  <span class="truncate">Hagamos tu video</span>
 </a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="sr-only">Twitter</span>
-<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
-</a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="sr-only">YouTube</span>
-<svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
-</a>
+</div>
+<!-- Footer Links -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-10 py-12">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-[24px]">movie</span>
+<span class="text-lg font-bold uppercase tracking-tight">JP films RD</span>
+</div>
+<p class="text-gray-500 text-sm mb-4">
+                            Premium cinematography studio based in Los Angeles, available worldwide.
+                        </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><i class="fa-brands fa-instagram"></i>IG</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">YT</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">LI</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Sitemap</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="index.html">Inicio</a></li>
+<li><a class="hover:text-primary transition-colors" href="portafolio.html">Portafolio</a></li>
+<li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="aboutme.html">About</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Socials</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Vimeo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">YouTube</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contact</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li>hello@somewherefilms.com</li>
+<li>+1 (555) 123-4567</li>
+<li>123 Sunset Blvd, Suite 400<br/>Los Angeles, CA 90028</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 text-xs text-gray-600">
+<p>© 2026 JP Films RD. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-gray-400" href="#">Privacy Policy</a>
+<a class="hover:text-gray-400" href="#">Terms of Service</a>
+</div>
 </div>
 </div>
 </footer>
