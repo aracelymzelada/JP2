@@ -94,3 +94,8 @@
 .bg-about-portrait {
     background-image: url("img/SIU2109.jpg");
 }
+
+/* Contact Background */
+.bg-contact-image {
+    background-image: url("img/DAV_4676.jpg");
+}

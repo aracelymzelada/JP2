@@ -1,50 +1,54 @@
 <!DOCTYPE html>
-
-<html class="light dark" lang="en"><head>
+<html class="dark" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact - Filmmaker Portfolio</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
+<!-- Google Fonts & Material Symbols from index.html -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="tailwind.config.js"></script>
-<!-- Theme Configuration -->
-    <!-- Custom Styles -->
-    <link href="styles.css" rel="stylesheet"/>
+<!-- Custom Styles -->
+<link href="styles.css" rel="stylesheet"/>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20 selection:text-primary">
-<div class="relative flex min-h-screen w-full flex-col overflow-hidden">
-<!-- Navigation -->
-<header class="flex w-full items-center justify-between whitespace-nowrap border-b border-solid border-[#f0f2f4] dark:border-[#1e2a35] bg-white dark:bg-background-dark px-6 py-4 lg:px-10 z-20">
-<div class="flex items-center gap-4 text-[#111418] dark:text-white">
-<div class="size-8 flex items-center justify-center rounded bg-primary/10 text-primary">
-<span class="material-symbols-outlined text-2xl">videocam</span>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="relative min-h-screen flex flex-col">
+
+<!-- Top Navigation (Matched perfectly with index.html) -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-5 lg:px-20 transition-all duration-300 bg-gradient-to-b from-black/80 to-transparent backdrop-blur-[2px]">
+<div class="flex items-center gap-3 text-white">
+    <img src="img/JPfilmsRD.png" alt="Logo" class="w-auto h-8 object-contain">
+    <h2 class="text-white text-xl font-bold tracking-tight uppercase">JP Films RD</h2>
 </div>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">JP Films RD</h2>
-</div>
-<div class="flex flex-1 justify-end gap-8">
-<div class="hidden md:flex items-center gap-9">
-<a class="text-[#111418] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="portafolio.html" target="_blank">Portafolio</a>
-<a class="text-[#111418] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="services.html" target="_blank">Servicios</a>
-<a class="text-[#111418] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="index.html" target="_blank">Inicio</a>
-</div>
-<button class="md:hidden text-[#111418] dark:text-white">
-<span class="material-symbols-outlined">menu</span>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="portafolio.html" target="_blank">Portafolio</a>
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="services.html" target="_blank">Servicios</a>
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="aboutme.html" target="_blank">Sobre mi</a>
+<a class="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors uppercase" href="contact.html" target="_blank">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<a 
+  href="https://wa.me/502XXXXXXXX"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="flex min-w-[84px] items-center justify-center overflow-hidden rounded h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-wide shadow-[0_0_15px_rgba(6,42,224,0.3)]"
+>
+  <span class="truncate">Cotiza tu video!</span>
+</a>
+<button class="md:hidden flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </header>
+
 <!-- Main Content Split Layout -->
-<main class="flex flex-1 flex-col lg:flex-row h-full">
+<main class="flex flex-1 flex-col lg:flex-row h-full w-full bg-background-light dark:bg-background-dark pt-20">
 <!-- Left Panel: Visual & Contact Info -->
-<div class="relative w-full lg:w-5/12 min-h-[400px] lg:min-h-[calc(100vh-73px)] flex flex-col justify-end p-8 lg:p-12 overflow-hidden bg-gray-900 group">
-<!-- Background Image -->
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="Cinematic landscape shot of mountains with moody lighting" style='background-image: url("img/DAV_4676.jpg");'></div>
+<div class="relative w-full lg:w-5/12 min-h-[400px] lg:min-h-[calc(100vh-80px)] flex flex-col justify-end p-8 lg:p-12 overflow-hidden bg-black group">
+<!-- Background Image using class -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 bg-contact-image" data-alt="Cinematic landscape shot of mountains with moody lighting"></div>
 <!-- Gradient Overlay -->
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
 <!-- Content -->
@@ -87,8 +91,8 @@
 <div class="h-[2px] w-8 bg-primary"></div>
 <span class="text-primary text-xs font-bold uppercase tracking-widest">Inquiry</span>
 </div>
-<h2 class="text-[#111418] dark:text-white text-[32px] lg:text-[40px] font-bold leading-[1.1]">Project Inquiry</h2>
-<p class="text-[#617589] dark:text-gray-400 text-base leading-relaxed max-w-[480px]">
+<h2 class="text-slate-900 dark:text-white text-[32px] lg:text-[40px] font-bold leading-[1.1]">Project Inquiry</h2>
+<p class="text-slate-600 dark:text-gray-400 text-base leading-relaxed max-w-[480px]">
                             Tell me about your vision. I'm currently accepting bookings for Q4 2024. Please fill out the details below.
                         </p>
 </div>
@@ -97,19 +101,19 @@
 <!-- Name & Email Row -->
 <div class="flex flex-col md:flex-row gap-6">
 <label class="flex flex-col flex-1 gap-2">
-<span class="text-[#111418] dark:text-white text-sm font-medium">Full Name</span>
-<input class="w-full rounded-lg border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white h-12 px-4 focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-[#9aa7b5]" placeholder="Jane Doe" required="" type="text"/>
+<span class="text-slate-900 dark:text-white text-sm font-medium">Full Name</span>
+<input class="w-full rounded-lg border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 text-slate-900 dark:text-white h-12 px-4 focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-slate-400" placeholder="Jane Doe" required="" type="text"/>
 </label>
 <label class="flex flex-col flex-1 gap-2">
-<span class="text-[#111418] dark:text-white text-sm font-medium">Email Address</span>
-<input class="w-full rounded-lg border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white h-12 px-4 focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-[#9aa7b5]" placeholder="jane@example.com" required="" type="email"/>
+<span class="text-slate-900 dark:text-white text-sm font-medium">Email Address</span>
+<input class="w-full rounded-lg border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 text-slate-900 dark:text-white h-12 px-4 focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-slate-400" placeholder="jane@example.com" required="" type="email"/>
 </label>
 </div>
 <!-- Service Type Dropdown -->
 <label class="flex flex-col gap-2">
-<span class="text-[#111418] dark:text-white text-sm font-medium">Service Type</span>
+<span class="text-slate-900 dark:text-white text-sm font-medium">Service Type</span>
 <div class="relative">
-<select class="w-full appearance-none rounded-lg border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white h-12 px-4 pr-10 focus:border-primary focus:ring-1 focus:ring-primary transition-colors cursor-pointer">
+<select class="w-full appearance-none rounded-lg border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 text-slate-900 dark:text-white h-12 px-4 pr-10 focus:border-primary focus:ring-1 focus:ring-primary transition-colors cursor-pointer">
 <option disabled="" selected="" value="">Select a project type</option>
 <option value="commercial">Commercial / Ad Campaign</option>
 <option value="documentary">Documentary</option>
@@ -117,34 +121,34 @@
 <option value="wedding">Wedding / Event</option>
 <option value="other">Other</option>
 </select>
-<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">expand_more</span>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">expand_more</span>
 </div>
 </label>
 <!-- Budget Range -->
 <label class="flex flex-col gap-2">
-<span class="text-[#111418] dark:text-white text-sm font-medium">Budget Range (USD)</span>
+<span class="text-slate-900 dark:text-white text-sm font-medium">Budget Range (USD)</span>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
 <label class="cursor-pointer relative">
 <input class="peer sr-only" name="budget" type="radio"/>
-<div class="rounded-lg border border-[#dbe0e6] dark:border-gray-700 py-2.5 px-3 text-center text-sm font-medium text-gray-600 dark:text-gray-300 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary transition-all">
+<div class="rounded-lg border border-slate-300 dark:border-gray-700 py-2.5 px-3 text-center text-sm font-medium text-slate-600 dark:text-gray-300 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary transition-all">
                                         &lt; $5k
                                     </div>
 </label>
 <label class="cursor-pointer relative">
 <input class="peer sr-only" name="budget" type="radio"/>
-<div class="rounded-lg border border-[#dbe0e6] dark:border-gray-700 py-2.5 px-3 text-center text-sm font-medium text-gray-600 dark:text-gray-300 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary transition-all">
+<div class="rounded-lg border border-slate-300 dark:border-gray-700 py-2.5 px-3 text-center text-sm font-medium text-slate-600 dark:text-gray-300 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary transition-all">
                                         $5k-10k
                                     </div>
 </label>
 <label class="cursor-pointer relative">
 <input class="peer sr-only" name="budget" type="radio"/>
-<div class="rounded-lg border border-[#dbe0e6] dark:border-gray-700 py-2.5 px-3 text-center text-sm font-medium text-gray-600 dark:text-gray-300 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary transition-all">
+<div class="rounded-lg border border-slate-300 dark:border-gray-700 py-2.5 px-3 text-center text-sm font-medium text-slate-600 dark:text-gray-300 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary transition-all">
                                         $10k-20k
                                     </div>
 </label>
 <label class="cursor-pointer relative">
 <input class="peer sr-only" name="budget" type="radio"/>
-<div class="rounded-lg border border-[#dbe0e6] dark:border-gray-700 py-2.5 px-3 text-center text-sm font-medium text-gray-600 dark:text-gray-300 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary transition-all">
+<div class="rounded-lg border border-slate-300 dark:border-gray-700 py-2.5 px-3 text-center text-sm font-medium text-slate-600 dark:text-gray-300 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary transition-all">
                                         $20k+
                                     </div>
 </label>
@@ -152,8 +156,8 @@
 </label>
 <!-- Message Textarea -->
 <label class="flex flex-col gap-2">
-<span class="text-[#111418] dark:text-white text-sm font-medium">Project Details</span>
-<textarea class="w-full rounded-lg border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white min-h-[140px] p-4 focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-[#9aa7b5] resize-y" placeholder="Tell me more about the project timeline, location, and creative vision..."></textarea>
+<span class="text-slate-900 dark:text-white text-sm font-medium">Project Details</span>
+<textarea class="w-full rounded-lg border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 text-slate-900 dark:text-white min-h-[140px] p-4 focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-slate-400 resize-y" placeholder="Tell me more about the project timeline, location, and creative vision..."></textarea>
 </label>
 <!-- Submit Button -->
 <div class="pt-4">
@@ -161,11 +165,85 @@
 <span>Send Inquiry</span>
 <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </button>
-<p class="text-center text-xs text-[#617589] mt-4">I typically respond within 24-48 hours.</p>
+<p class="text-center text-xs text-slate-500 mt-4">I typically respond within 24-48 hours.</p>
 </div>
 </form>
 </div>
 </div>
 </main>
+
+<!-- Footer Top & Bottom (Matched perfectly with index.html) -->
+<!-- Note: In contact.html the footer isn't shown in the original split layout at the bottom in the same way, but it should be placed below main to make it match index.html -->
+<footer class="bg-[#05080a] text-white pt-20 pb-10 border-t border-white/5 w-full">
+<div class="px-4 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
+<!-- CTA -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-10 pb-20 border-b border-white/10">
+<div class="text-center md:text-left">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Listo para grabar tu historia?</h2>
+<p class="text-gray-400 max-w-md">Trabajemos juntos en tu siguiente audivisual. Tenemos algunas citas disponibles todavia para este 2026.</p>
 </div>
-</body></html>
+<a 
+  href="https://wa.me/502XXXXXXXX"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="flex min-w-[84px] items-center justify-center overflow-hidden rounded h-9 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-wide shadow-[0_0_15px_rgba(6,42,224,0.3)]"
+>
+  <span class="truncate">Hagamos tu video</span>
+</a>
+</div>
+<!-- Footer Links -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-10 py-12">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+    <img src="img/JPfilmsRD.png" alt="Logo" class="w-auto h-8 object-contain filter brightness-0 invert opacity-80">
+<span class="text-lg font-bold uppercase tracking-tight">JP films RD</span>
+</div>
+<p class="text-gray-500 text-sm mb-4">
+                            Premium cinematography studio based in Los Angeles, available worldwide.
+                        </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-white transition-colors" href="#"><i class="fa-brands fa-instagram"></i>IG</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">YT</a>
+<a class="text-gray-400 hover:text-white transition-colors" href="#">LI</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Sitemap</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Portafolio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">About</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Socials</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Vimeo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">YouTube</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contact</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-400">
+<li>hello@somewherefilms.com</li>
+<li>+1 (555) 123-4567</li>
+<li>123 Sunset Blvd, Suite 400<br/>Los Angeles, CA 90028</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 text-xs text-gray-600">
+<p>© 2026 JP Films RD. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-gray-400" href="#">Privacy Policy</a>
+<a class="hover:text-gray-400" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+</body>
+</html>
